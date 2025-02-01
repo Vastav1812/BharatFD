@@ -150,7 +150,7 @@ curl -X GET "http://127.0.0.1:8000/api/faqs/?lang=hi" -H "Accept: application/js
     }
 ]
 ```
-### 3 **Retrieve FAQs in Hindi (हिंदी)**
+### 3 **Retrieve FAQs inBengali (বাংলা)**
 ### Endpoint
 ```bash
 GET /api/faqs/?lang=bn
