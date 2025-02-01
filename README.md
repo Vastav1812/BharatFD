@@ -37,7 +37,63 @@ It supports dynamic content management using **Django Admin**, **PostgreSQL**, a
 
 ## 🛠️ Installation & Setup
 
-### 1️⃣ **Clone the Repository**
+### 1️ **Clone the Repository**
 ```sh
 git clone https://github.com/Vastav1812/BharatFD.git
 cd BharatFD
+```
+### 2️ **Create & Activate Virtual Environment**
+```sh
+Copy
+Edit
+python -m venv venv
+source venv/bin/activate  # On macOS/Linux
+venv\Scripts\activate     # On Windows
+```
+### 3️ **Install Dependencies**
+```sh
+Copy
+Edit
+pip install -r requirements.txt
+```
+### 4️ **Set Up Environment Variables**
+Create a .env file in the project root:
+
+```sh
+Copy
+Edit
+SECRET_KEY=your-secret-key
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+DATABASE_URL=postgres://user:password@host:port/dbname
+REDIS_URL=redis://127.0.0.1:6379/1
+```
+### Running the Application
+### 5️ **Apply Migrations**
+```sh
+Copy
+Edit
+python manage.py migrate
+```
+###6️ **Collect Static Files**
+```sh
+Copy
+Edit
+python manage.py collectstatic --noinput
+```
+### 7️ **Start the Server**
+```sh
+Copy
+Edit
+python manage.py runserver
+```
+### Access API at:
+```
+http://127.0.0.1:8000/api/faqs/
+```
+
+### Admin Panel:
+```
+http://127.0.0.1:8000/admin/
+(Default Superuser: admin / password123)
+```
