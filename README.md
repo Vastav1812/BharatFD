@@ -89,5 +89,5 @@ http://127.0.0.1:8000/api/faqs/
 ### Admin Panel:
 ```
 http://127.0.0.1:8000/admin/
-(Default Superuser: admin / password123)
+(Default Superuser: admin / admin)
 ```
