@@ -93,7 +93,7 @@ http://127.0.0.1:8000/admin/
 ```
 ![Screenshot](Screenshots/admin_login.png)
 
-
+![Screenshot](Screenshots/admin.png)
 ---
 
 ##  **Endpoints**
@@ -124,6 +124,8 @@ curl -X GET "http://127.0.0.1:8000/api/faqs/" -H "Accept: application/json"
     }
 ]
 ```
+![Screenshot](Screenshots/english.png)
+
 ### 2️ **Retrieve FAQs in Hindi (हिंदी)**
 ### Endpoint
 ```bash
@@ -151,6 +153,7 @@ curl -X GET "http://127.0.0.1:8000/api/faqs/?lang=hi" -H "Accept: application/js
     }
 ]
 ```
+![Screenshot](Screenshots/hindi.png)
 ### 3 **Retrieve FAQs inBengali (বাংলা)**
 ### Endpoint
 ```bash
@@ -179,6 +182,7 @@ curl -X GET "http://127.0.0.1:8000/api/faqs/?lang=bn" -H "Accept: application/js
 ]
 
 ```
+![Screenshot](Screenshots/bengali.png)
 
 
 
