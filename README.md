@@ -122,6 +122,64 @@ curl -X GET "http://127.0.0.1:8000/api/faqs/" -H "Accept: application/json"
         "language": "en"
     }
 ]
+```
+### 2️ **Retrieve FAQs in Hindi (हिंदी)**
+### Endpoint
+```bash
+GET /api/faqs/?lang=hi
+```
+### Example Request
+```sql
+curl -X GET "http://127.0.0.1:8000/api/faqs/?lang=hi" -H "Accept: application/json"
+```
+### Example Response
+```json
+
+[
+    {
+        "id": 1,
+        "question": "Django क्या है?",
+        "answer": "Django एक उच्च-स्तरीय पायथन वेब फ्रेमवर्क है।",
+        "language": "hi"
+    },
+    {
+        "id": 2,
+        "question": "Python क्या है?",
+        "answer": "Python एक प्रोग्रामिंग भाषा है जो वेब विकास और डेटा विज्ञान के लिए उपयोग की जाती है।",
+        "language": "hi"
+    }
+]
+```
+### 3 **Retrieve FAQs in Hindi (हिंदी)**
+### Endpoint
+```bash
+GET /api/faqs/?lang=bn
+```
+### Example Request
+```sql
+curl -X GET "http://127.0.0.1:8000/api/faqs/?lang=bn" -H "Accept: application/json"
+
+```
+### Example Response
+```json
+[
+    {
+        "id": 1,
+        "question": "Django কি?",
+        "answer": "Django একটি উচ্চ-স্তরের পাইথন ওয়েব ফ্রেমওয়ার্ক।",
+        "language": "bn"
+    },
+    {
+        "id": 2,
+        "question": "Python কি?",
+        "answer": "Python হল একটি প্রোগ্রামিং ভাষা যা ওয়েব উন্নয়ন এবং ডেটা বিজ্ঞানের জন্য ব্যবহৃত হয়।",
+        "language": "bn"
+    }
+]
+
+```
+
+
 
 
 
