@@ -1,0 +1,48 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    container_name: django_app
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
+    environment:
+      - DEBUG=True
+      - DB_NAME=faq_db
+      - DB_USER=faq_user
+      - DB_PASSWORD=vastav
+      - DB_HOST=db
+      - DB_PORT=5432
+      - REDIS_URL=redis://redis:6379/1
+      - GOOGLE_TRANSLATE_API_KEY=${GOOGLE_TRANSLATE_API_KEY}
+    env_file:
+      - .env
+
+  db:
+    image: postgres:13
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_DB: faq_db
+      POSTGRES_USER: faq_user
+      POSTGRES_PASSWORD: vastav
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:alpine
+    container_name: redis_cache
+    restart: always
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:

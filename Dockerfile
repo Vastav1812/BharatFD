@@ -1,20 +1,21 @@
-# Use the official Python image
+# Use an official Python runtime
 FROM python:3.10
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the requirements file
-COPY requirements.txt .
+# Copy project files
+COPY . /app
 
 # Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copy the project files
-COPY . .
-
-# Expose port 8000
+# Expose the application port
 EXPOSE 8000
 
-# Run the application
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "frequently_asked_questions.wsgi:application"]
+# Start Django server
+CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
