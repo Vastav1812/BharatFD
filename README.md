@@ -91,6 +91,7 @@ http://127.0.0.1:8000/api/faqs/
 http://127.0.0.1:8000/admin/
 (Default Superuser: admin / admin)
 ```
+![Screenshot](Screenshots/admin_login.png)
 
 
 ---
