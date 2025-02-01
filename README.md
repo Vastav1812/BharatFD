@@ -91,3 +91,37 @@ http://127.0.0.1:8000/api/faqs/
 http://127.0.0.1:8000/admin/
 (Default Superuser: admin / admin)
 ```
+
+
+---
+
+##  **Endpoints**
+
+### **1️ Retrieve All FAQs**
+####  **Endpoint**
+```
+GET /api/faqs/
+```
+#### **Example Request**
+```
+curl -X GET "http://127.0.0.1:8000/api/faqs/" -H "Accept: application/json"
+```
+####  **Example Response**
+```json
+[
+    {
+        "id": 1,
+        "question": "What is Django?",
+        "answer": "Django is a high-level Python web framework.",
+        "language": "en"
+    },
+    {
+        "id": 2,
+        "question": "What is Python?",
+        "answer": "Python is a programming language for web development and data science.",
+        "language": "en"
+    }
+]
+
+
+
