@@ -11,7 +11,7 @@
 **BharatFD** is a multilingual Frequently Asked Questions (FAQ) API built with **Django REST Framework (DRF)**.  
 It supports dynamic content management using **Django Admin**, **PostgreSQL**, and **Redis caching** for optimized performance.
 
-## 🚀 Features
+## Features
 
 - ✅ **RESTful API** for FAQ retrieval
 - ✅ **Admin panel** for managing FAQs
@@ -21,7 +21,7 @@ It supports dynamic content management using **Django Admin**, **PostgreSQL**, a
 - ✅ **PostgreSQL as the database backend**
 - ✅ **Static file handling via WhiteNoise**
 
-## 🎯 Tech Stack
+##  Tech Stack
 
 | Technology     | Purpose                           |
 |--------------|--------------------------------|
@@ -35,7 +35,7 @@ It supports dynamic content management using **Django Admin**, **PostgreSQL**, a
 
 ---
 
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
 ### 1️ **Clone the Repository**
 ```sh
@@ -44,24 +44,21 @@ cd BharatFD
 ```
 ### 2️ **Create & Activate Virtual Environment**
 ```sh
-Copy
-Edit
+
 python -m venv venv
 source venv/bin/activate  # On macOS/Linux
 venv\Scripts\activate     # On Windows
 ```
 ### 3️ **Install Dependencies**
 ```sh
-Copy
-Edit
+
 pip install -r requirements.txt
 ```
 ### 4️ **Set Up Environment Variables**
 Create a .env file in the project root:
 
 ```sh
-Copy
-Edit
+
 SECRET_KEY=your-secret-key
 DEBUG=True
 ALLOWED_HOSTS=localhost,127.0.0.1
@@ -71,20 +68,17 @@ REDIS_URL=redis://127.0.0.1:6379/1
 ### Running the Application
 ### 5️ **Apply Migrations**
 ```sh
-Copy
-Edit
+
 python manage.py migrate
 ```
 ###6️ **Collect Static Files**
 ```sh
-Copy
-Edit
+
 python manage.py collectstatic --noinput
 ```
 ### 7️ **Start the Server**
 ```sh
-Copy
-Edit
+
 python manage.py runserver
 ```
 ### Access API at:
